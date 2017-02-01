@@ -49,7 +49,7 @@ public class CommandEmberFill extends CommandBase {
             int chunkZ = z / 16;
 
             EmberWorldData data = EmberWorldData.get(sender.getEntityWorld());
-            String key = "" + chunkX + " " + chunkZ;
+            String key = EmberWorldData.getChunkString(x, z);
 
             if ("set".equals(args[2])) {
                 if (args.length > 3) {
